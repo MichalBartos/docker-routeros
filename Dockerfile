@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:latest
 
 # For access via VNC
 EXPOSE 5900
@@ -17,7 +17,7 @@ RUN set -xe \
     bridge-utils iptables jq bash python3
 
 # Environments which may be change
-ENV ROUTEROS_VERSON="7.1beta6"
+ENV ROUTEROS_VERSON="7.5"
 ENV ROUTEROS_IMAGE="chr-$ROUTEROS_VERSON.vdi"
 ENV ROUTEROS_PATH="https://download.mikrotik.com/routeros/$ROUTEROS_VERSON/$ROUTEROS_IMAGE"
 
